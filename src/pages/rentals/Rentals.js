@@ -1,4 +1,6 @@
 // styles
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
 import './Rentals.scss';
 
@@ -42,6 +44,19 @@ const rentalProperties = [
 ]
 
 export default function Rentals() {
+  const rentalProps = useRef();
+  const q = gsap.utils.selector(rentalProps);
+
+  useEffect(() => {
+    gsap.from(q('.rp'), {
+      y: 50,
+      opacity: 0,
+      stagger: 0.33,
+      delay: .15,
+      duration: 1.15
+    })
+  }, [q]);
+  
   return (
     <div className='container-fluid min-vh-100 bg-light text-dark p-0' >Rentals
       <div className="rentals container-fluid" style={{ backgroundImage: `url('https://source.unsplash.com/Umh6cEf4V8s')`}} />
@@ -58,9 +73,9 @@ export default function Rentals() {
           <p className='col-12 col-lg-6 mx-auto ms-lg-0'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda soluta, consequatur distinctio itaque voluptatem atque nihil? Qui ad magnam perferendis voluptate, amet nisi ea ipsam quis animi adipisci quod id.</p>
         </div>
 
-        <div className='rental-grid container-lg text-dark d-flex align-items-center justify-content-center justify-content-lg-between col-10'>
+        <div className='rental-grid container-lg text-dark d-flex align-items-center justify-content-center justify-content-lg-between col-10' ref={rentalProps}>
           {rentalProperties.map(prop => (
-            <div key={prop.id} className="col-10 col-sm-5 col-lg-3 me-sm-3 me-lg-5 mb-5 text-center text-lg-start">
+            <div key={prop.id} className="col-10 col-sm-5 col-lg-3 me-sm-3 me-lg-5 mb-5 text-center text-lg-start rp">
               <img className='w-100' src={prop.image} alt={prop.title} />
               <p className="lead fs-5 fw-bold my-2">{prop.title}</p>
               <p className="mt-2 pb-4 fw-light">{prop.text}</p>

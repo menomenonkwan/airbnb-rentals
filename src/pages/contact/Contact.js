@@ -31,7 +31,7 @@ export default function Contact() {
       
         <div className="text-start my-5">
           <h1 className='display-2'>{titleCase(location.pathname)}</h1>
-          {location.pathname === '/reservations' && <p className="lead">Fill out the form below and we can begin the reservation process.</p>}
+          {location.pathname === '/reservations' && <p className="lead">Fill out the form below and we can begin the reservation process as fast as possible...</p>}
           {location.pathname === '/contact' && <p className="lead">Questions to ask? Fill out the form and we'll get back to you as soon as possible...</p>}
         </div>
 

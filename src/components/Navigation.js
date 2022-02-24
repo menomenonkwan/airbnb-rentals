@@ -19,10 +19,9 @@ export default function Navigation() {
             <LinkContainer to="/rentals">
               <Nav.Link>Rentals</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/faqs">
+            <LinkContainer to="/#">
               <Nav.Link>Faqs</Nav.Link>
             </LinkContainer>
-            
             <NavDropdown title="Contact" id="collasible-nav-dropdown">
               <LinkContainer to="/reservations">
                 <NavDropdown.Item href="/reservations">Reservations</NavDropdown.Item>
