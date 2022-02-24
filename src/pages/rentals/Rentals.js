@@ -49,9 +49,9 @@ export default function Rentals() {
       <section className='flex-column justify-content-center align-items-center h-100 mb-5'>
         <div className='container-lg col-10 rental-header text-dark d-flex flex-column justify-content-center align-items-start text-center text-lg-start mt-3'>
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li class="breadcrumb-item active" aria-current="page">Rentals</li>
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Rentals</li>
             </ol>
           </nav>
           <h2 className='display-3 w-100'>Available Rentals</h2>
@@ -60,7 +60,7 @@ export default function Rentals() {
 
         <div className='rental-grid container-lg text-dark d-flex align-items-center justify-content-center justify-content-lg-between col-10'>
           {rentalProperties.map(prop => (
-            <div key={prop.id} className="col-10 col-sm-5 col-lg-3 me-md-3 mb-5">
+            <div key={prop.id} className="col-10 col-sm-5 col-lg-3 me-sm-3 me-lg-5 mb-5 text-center text-lg-start">
               <img className='w-100' src={prop.image} alt={prop.title} />
               <p className="lead fs-5 fw-bold my-2">{prop.title}</p>
               <p className="mt-2 pb-4 fw-light">{prop.text}</p>

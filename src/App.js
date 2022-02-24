@@ -8,7 +8,10 @@ import Faqs from './pages/faqs/Faqs';
 import Contact from './pages/contact/Contact';
 import Footer from './components/Footer';
 
+
 function App() {
+
+
   return (
     <div className="App">
 
