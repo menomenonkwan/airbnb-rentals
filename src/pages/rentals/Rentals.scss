@@ -1,0 +1,21 @@
+.rentals {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+  position: absolute;
+  top: 0;
+}
+.rental-header {
+  min-height: 50vh;
+  z-index: 1;
+}
+.rental-grid {
+  z-index: 1;
+  flex-wrap: wrap;
+}
+.rental-grid img {
+  width: 150px;
+  height: 325px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}

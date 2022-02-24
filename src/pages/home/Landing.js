@@ -14,7 +14,7 @@ export default function Landing() {
           <Link to="/rentals" className='btn btn-primary'>All Rentals</Link>
         </div>
 
-        <ul className='featured-homes d-flex flex-column flex-md-row  justify-content-between align-items-start gap-5 col-10 col-lg-6 mt-5 mt-lg-0'>
+        <ul className='featured-homes d-flex flex-column flex-md-row  justify-content-between align-items-start gap-5 col-10 col-lg-6 my-5 my-lg-0'>
           <li>
             <img className="w-100" src="https://source.unsplash.com/iAkAhmq0bvA" alt="forest house" />
             <p className="lead fs-5 fw-bold my-2">Forest Hideaway</p>
