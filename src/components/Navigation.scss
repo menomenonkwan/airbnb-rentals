@@ -1,0 +1,12 @@
+@import "../styles/variables.scss";
+
+.navbar {
+  font-family: $primaryFont;
+}
+.navbar-brand {
+  font-size: 2em !important;
+}
+.brand a {
+  padding: unset;
+  color: $pink !important;
+}

@@ -1,23 +1,48 @@
-import { Link, NavLink } from 'react-router-dom';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap'
+
 // styles
-import './Navigation.css';
+import './Navigation.scss';
 
 export default function Navigation() {
   return (
-    <Navbar collapseOnSelect expand="md" className="sticky-top bg-light">
+    <Navbar collapseOnSelect fixed="top" expand="sm" bg="light" className="navbar">
       <Container fluid className="px-3">
-        <Navbar.Brand className="brand pb-0 d-flex justify-content-center align-items-center"><Link to="/" className="fw-bold text-dark">getawaysBNB</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto lead">
-            <NavLink to="/" className="text-dark ms-4 mt-3 mt-md-0">Home</NavLink>
-            <NavLink to="/rentals" className="text-dark ms-4 mt-3 mt-md-0">Rentals</NavLink>
-            <NavLink to="#" className="text-dark ms-4 mt-3 mt-md-0">Faqs</NavLink>
-            <NavLink to="#" className="text-dark ms-4 mt-3 mt-md-0">Reservations</NavLink>
+        <Navbar.Brand className="fw-bold brand"><Nav.Link href="/">GroundBnB</Nav.Link></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          
+          <Nav className="ms-5 ms-sm-auto lead">
+            <LinkContainer to="/">
+              <Nav.Link>Home</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/rentals">
+              <Nav.Link>Rentals</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/faqs">
+              <Nav.Link>Faqs</Nav.Link>
+            </LinkContainer>
+            
+            <NavDropdown title="Contact" id="collasible-nav-dropdown">
+              <LinkContainer to="/reservations">
+                <NavDropdown.Item href="/reservations">Reservations</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/contact">
+                <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
+              </LinkContainer>
+            </NavDropdown>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   )
 }
+
+
+
+
+
+
+
+

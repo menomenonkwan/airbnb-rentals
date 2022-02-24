@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+section {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $light;
+  font-family: $primaryFont;
+
+  display: flex;
+}
+ul,
+ol {
+  padding-left: 0 !important;
+}
+.tint {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
+}
+a {
+  text-decoration: none !important;
+}
+ul {
+  list-style: none;
+}
+.active {
+  font-weight: bold;
+}

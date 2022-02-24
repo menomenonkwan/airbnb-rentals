@@ -1,7 +1,5 @@
 // styles
-import './Rentals.css';
-
-import React from 'react'
+import './Rentals.scss';
 
 export default function Rentals() {
   return (

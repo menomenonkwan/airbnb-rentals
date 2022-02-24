@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 // styles
-import './index.css';
+import './styles/index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
