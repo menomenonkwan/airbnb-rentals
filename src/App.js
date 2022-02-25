@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="/" element={ <Home /> } />
+          <Route path="airbnb-rentals/" element={ <Home /> } />
           <Route path="/rentals" element={ <Rentals /> } />
           <Route path="/reservations" element={ <Contact /> } />
           <Route path="/contact" element={ <Contact /> } />
