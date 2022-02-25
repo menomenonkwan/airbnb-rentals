@@ -2,11 +2,15 @@
 
 .navbar {
   font-family: $primaryFont;
+  background: $orange;
+}
+.navbar a {
+  color: $dark !important;
 }
 .navbar-brand {
   font-size: 2em !important;
 }
 .brand a {
   padding: unset;
-  color: $pink !important;
+  color: $light !important;
 }

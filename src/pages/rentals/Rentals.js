@@ -1,7 +1,8 @@
-// styles
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
+
+// styles
 import './Rentals.scss';
 
 const rentalProperties = [
@@ -61,7 +62,7 @@ export default function Rentals() {
     <div className='container-fluid min-vh-100 bg-light text-dark p-0' >Rentals
       <div className="rentals container-fluid" style={{ backgroundImage: `url('https://source.unsplash.com/Umh6cEf4V8s')`}} />
       
-      <section className='flex-column justify-content-center align-items-center h-100 mb-5'>
+      <section className='flex-column justify-content-center rental-bg align-items-center h-100 mb-5'>
         <div className='container-lg col-10 rental-header text-dark d-flex flex-column justify-content-center align-items-start text-center text-lg-start mt-3'>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
@@ -75,7 +76,7 @@ export default function Rentals() {
 
         <div className='rental-grid container-lg text-dark d-flex align-items-center justify-content-center justify-content-lg-between col-10' ref={rentalProps}>
           {rentalProperties.map(prop => (
-            <div key={prop.id} className="col-10 col-sm-5 col-lg-3 me-sm-3 me-lg-5 mb-5 text-center text-lg-start rp">
+            <div key={prop.id} className="col-10 col-sm-5 col-lg-3 me-sm-3 me-lg-5 mb-5 text-center text-lg-start rp bg-light p-4 shadow">
               <img className='w-100' src={prop.image} alt={prop.title} />
               <p className="lead fs-5 fw-bold my-2">{prop.title}</p>
               <p className="mt-2 pb-4 fw-light">{prop.text}</p>

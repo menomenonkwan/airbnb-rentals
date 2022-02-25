@@ -6,7 +6,7 @@ import './Navigation.scss';
 
 export default function Navigation() {
   return (
-    <Navbar collapseOnSelect fixed="top" expand="sm" bg="light" className="navbar">
+    <Navbar collapseOnSelect fixed="top" expand="sm" className="navbar">
       <Container fluid className="px-3">
         <Navbar.Brand className="fw-bold brand"><Nav.Link href="/">GroundBnB</Nav.Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -22,7 +22,7 @@ export default function Navigation() {
             <LinkContainer to="/#">
               <Nav.Link>Faqs</Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Contact" id="collasible-nav-dropdown">
+            <NavDropdown class="text-primary" title="Contact" id="collasible-nav-dropdown">
               <LinkContainer to="/reservations">
                 <NavDropdown.Item href="/reservations">Reservations</NavDropdown.Item>
               </LinkContainer>

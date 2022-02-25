@@ -1,8 +1,7 @@
-
 export default function Amenities() {
   return (
     <section>
-      <div className="container-fluid bg-dark text-center text-lg-start d-flex flex-column flex-lg-row pt-5 p-lg-5">
+      <div className="container-fluid bg-dark text-center text-lg-start d-flex flex-column flex-lg-row pt-5 p-lg-5 amenities">
         <div className='col-lg-3 px-4 mb-5 mb-lg-0'>
           <h3 className='lead fs-2'>Free Wifi <span><i className="bi bi-wifi ms-1 fs-3"></i></span></h3>
           <p className='fs-5 fw-lighter'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis dolorem odit, deleniti mollitia rem harum quisquam repellendus quam quos totam reiciendis, cum dicta reprehenderit eos architecto dolor laudantium. Earum, qui.</p>

@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .landing {
   padding-top: 15vh;
 }
@@ -11,4 +13,35 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+// .title .btn {
+//   background: $orange;
+//   border-color: $orange;
+// }
+// .title .btn:hover {
+//   border-color: $orange;
+//   background: $orange !important;
+//   filter: brightness(0.9);
+// }
+.featured-homes .btn {
+  color: $orange;
+  border-color: $orange;
+}
+.amenities h3 {
+  color: $light;
+}
+.amenities i {
+  color: $orange;
+}
+.reviews blockquote,
+.reviews h3,
+.testimonials {
+  color: $blue;
+}
+
+.testimonials li {
+  background: $light;
+}
+.reviews {
+  background: rgba($light, 0.4);
 }

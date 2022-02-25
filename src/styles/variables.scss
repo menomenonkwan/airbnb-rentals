@@ -1,18 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Neonderthaw&family=Raleway:wght@300;500;700&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
 
 $primaryFont: "Poppins", sans-serif;
-// $primaryFont: "Raleway", sans-serif;
-$secondaryFont: "Dancing Script", cursive;
-$titleFont: "Neonderthaw", cursive;
 
-// colors
-$light: rgb(240, 240, 240);
-$dark: rgb(24, 24, 24);
-$beige: rgb(182, 164, 152);
-$pink: rgb(255, 105, 180);
-$blue: #719ece;
-// Calming neutral color scheme by Lovely Grit Studio: #ef9273 #fef9f8 #0d0d0d
-// Trustworthy Teal Tones via N26:#2b6777 #c8d8e4 #ffffff #f2f2f2 #52ab98
-// Meditative color scheme by Spoon Lancer: #fae5df #f5cac2 #ed7966 #303179 #141850
+$orange: #ed7966;
+$blue: #303179;
+$dark: #141850;
+$light: #fbf5e5;
+// custom variables
+
+@import "../../node_modules//bootstrap/scss/functions";
+@import "../../node_modules//bootstrap/scss/variables";
+
+// custom theme colors
+
+$custom-theme-colors: ();
+
+$theme-colors: (
+  "primary": #ed7966,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge(
+  $theme-colors-rgb,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color),
+  )
+);
+
+$utilities-text-colors: map-loop(
+  $utilities-colors,
+  rgba-css-var,
+  "$key",
+  "text"
+);
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

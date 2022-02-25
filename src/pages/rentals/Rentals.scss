@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .rentals {
   background-position: top;
   background-size: cover;
@@ -9,6 +11,9 @@
 .rental-header {
   min-height: 50vh;
   z-index: 1;
+}
+.rental-bg {
+  background: $light;
 }
 .rental-grid {
   z-index: 1;
