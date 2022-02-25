@@ -2,14 +2,13 @@
   "name": "airbnb-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http:menomenonkwan.github.io/airbnb-rentals ",
+  "homepage": "http:menomenonkwan.github.io/airbnb-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.1",
-    "gh-pages": "^3.2.3",
     "gsap": "^3.9.1",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
@@ -45,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
